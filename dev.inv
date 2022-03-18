@@ -1,2 +1,2 @@
 [dev]
-54.211.67.246 ansible_user=jenkins
+localhost ansible_user=jenkins

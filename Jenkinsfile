@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    stages {
+      stage {
        checkout([
        $class: 'GitSCM',
        branches: scm.branches,
@@ -7,12 +9,15 @@ pipeline {
        extensions: [[$class: 'CloneOption', noTags: false, shallow: false, depth: 0, reference: '']],
        userRemoteConfigs: scm.userRemoteConfigs,
        ])
-     stages {
-        stage (sample) {
-           sh '''
-           pwd
-           ls -ltr
-           '''
-        }
-     }
+      }
+      stage (sample) {
+          steps{
+              
+             sh '''
+             pwd
+             ls -ltr
+             '''
+          }
+      }
+    }
 }

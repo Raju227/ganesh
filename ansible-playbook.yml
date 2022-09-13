@@ -1,7 +1,6 @@
 ---
 - hosts: dev
   become: true
-  become_user: jenkins
   tasks:
   - name: creating user
     user:

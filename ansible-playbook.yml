@@ -4,5 +4,5 @@
   tasks:
   - name: creating user
     user:
-      name: rajitha123
-      password: rajitha123
+      name: ramanji
+      password: ramanji
